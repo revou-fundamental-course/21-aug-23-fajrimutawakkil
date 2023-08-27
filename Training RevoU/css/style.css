@@ -32,12 +32,12 @@ body {
     text-transform: capitalize;
 }
 
-img {
+.logoatas {
     height: 45px;
     padding-top: 10px;
 }
 
-img:hover {
+.logoatas:hover {
     height: 55px;
     transition: all .3s ease-in-out;
 }
@@ -88,6 +88,12 @@ img:hover {
 .intro {
     background-color: #fffcf2;
     background-image: url(../assets/background.jpg);
+}
+
+.welcome {
+    text-align: center;
+    font-size: 5em;
+    font-family: Roboto;
 }
 
 h1 {
