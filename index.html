@@ -3,11 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
     <title>Karasuno Highschool</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
+  <!---->
   <body>
+    <!--Header-->
     <header>
+      <!--Responsive Navbar-->
       <section id="Container">
         <nav class="wrapper">
           <div class="brand">
@@ -32,13 +36,15 @@
         </nav>
       </section>
     </header>
+
+    <!--content-->
     <main>
       <div class="parallax intro">
         <div class="cta">
           <div class="title">karasuno highschool</div>
         </div>
-        <br />
 
+        <!--Responsive Slideshow Photos-->
         <div class="slideshow-container">
           <div class="mySlides fade">
             <div class="numbertext">1/5</div>
@@ -53,7 +59,7 @@
           <div class="mySlides fade">
             <div class="numbertext">3/5</div>
             <img src="assets/slideshow3.jpg" style="width: 100%" />
-            <div class="text">Post Annual Training</div>
+            <div class="text">Post Regular Training</div>
           </div>
           <div class="mySlides fade">
             <div class="numbertext">4/5</div>
@@ -66,9 +72,12 @@
             <div class="text">Barbecue</div>
           </div>
 
+          <!--Next and Prev buttons-->
           <a class="prev" onClick="nextSlide(-1)">&#10094;</a>
           <a class="next" onClick="nextSlide(1)">&#10095;</a>
         </div>
+
+        <!--Dots below slideshow-->
         <div style="text-align: center">
           <span class="dot" onclick="currentSlide(0)"></span>
           <span class="dot" onclick="currentSlide(1)"></span>
@@ -77,13 +86,18 @@
           <span class="dot" onclick="currentSlide(4)"></span>
         </div>
       </div>
+
       <br />
       <br />
+
+      <!--Second Content-->
       <div class="parallax content">
         <div class="cta">
           <div class="title">Our Facilities</div>
         </div>
         <br />
+
+        <!--Facilities context with cards-->
         <div class="container">
           <div class="column">
             <div class="card">
@@ -125,55 +139,59 @@
           </div>
         </div>
       </div>
+
+      <!--Message Us Page-->
       <div class="parallax outro">
         <div class="cta">
           <div class="title">Message Us</div>
         </div>
         <br />
+
+        <!--Message Form-->
         <section id="fContainer">
-          <form action="contact.php" method="get">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name.."
-            />
-
-            <label for="sex">Sex:</label>
-            <label for="sex" id="sex"
-              ><input
-                type="radio"
-                name="sex"
-                id="sex"
-                value="Male"
-              />Male</label
-            >
-            <label for="sex" id="sex"
-              ><input
-                type="radio"
-                name="sex"
-                id="sex"
-                value="Female"
-              />Female</label
-            >
-
+          <form
+            name="mesaggeForm"
+            action="contact.php"
+            method="post"
+            onsubmit="return validateForm()"
+          >
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Name" />
             <br />
-            <br />
+
+            <label for="sex" id="sex">
+              <select name="sex" id="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </label>
+
+            <br /><br />
 
             <label for="birthday">Birthday:</label>
             <input type="date" name="birthday" id="birthday" />
 
             <br />
+
+            <label for="email"></label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
             <br />
 
-            <label for="continent">Continent</label>
-            <select name="continent" id="continent">
-              <option value="asia">Asia</option>
-              <option value="africa">Africa</option>
-              <option value="europe">Europe</option>
-              <option value="antarctica">Antarctica</option>
-            </select>
+            <label for="phone"></label>
+            <input
+              type="phone"
+              name="phone"
+              id="phone"
+              placeholder="Phone number"
+              required
+              maxlength="12"
+            />
 
             <label for="message">Message</label>
             <textarea
@@ -183,7 +201,7 @@
               style="height: 200px"
             ></textarea>
 
-            <input type="submit" value="submit" />
+            <input type="submit" value="Send" />
           </form>
         </section>
       </div>
