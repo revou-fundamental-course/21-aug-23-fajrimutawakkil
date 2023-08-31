@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Karasuno Highschool</title>
+  </head>
+  <body>
+    <header>
+      <section id="Container">
+        <nav class="wrapper">
+          <div class="brand">
+            <div>
+              <a href=""
+                ><img
+                  class="logoatas"
+                  src="assets/logo.png"
+                  alt="logo"
+                  title="Logo Karasuno Highschool"
+              /></a>
+            </div>
+            <div class="firstname">karasuno</div>
+            <div class="lastname">higschool</div>
+          </div>
+          <ul class="navigation">
+            <li><a href="/">home</a></li>
+            <li><a href="/">our facilities</a></li>
+            <li><a href="/">achievement</a></li>
+            <li><a href="/">message us</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main>
+      <div class="parallax intro">
+        <div class="cta">
+          <div class="title">karasuno highschool</div>
+        </div>
+      </div>
+      <div class="parallax content">
+        <div class="cta">
+          <div class="title">Our Facilities</div>
+        </div>
+        <br />
+        <div class="container">
+          <div class="column">
+            <div class="card">
+              <div class="head-card">
+                <img src="assets/teacher2.webp" alt="teacher" />
+              </div>
+              <div class="body-card">
+                <h2>Teacher</h2>
+                <p>We have capable teacher that suit their subjects</p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="head-card">
+                <img src="assets/sportsfield.jpg" alt="sports field" />
+              </div>
+              <div class="body-card">
+                <h2>Sports Field</h2>
+                <p>
+                  Our sports field shall improve the aptitude of the students
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="head-card">
+                <img src="assets/classroom.jpg" alt="classroom" />
+              </div>
+              <div class="body-card">
+                <h2>Classroom</h2>
+                <p>
+                  Cozy classrooms, yet have potential to build a competitive
+                  environment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax outro">
+        <div class="cta">
+          <div class="title">Message Us</div>
+        </div>
+        <br />
+        <section id="fContainer">
+          <form action="contact.php" method="get">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name.."
+            />
+
+            <label for="sex">Sex:</label>
+            <label for="sex" id="sex"
+              ><input
+                type="radio"
+                name="sex"
+                id="sex"
+                value="Male"
+              />Male</label
+            >
+            <label for="sex" id="sex"
+              ><input
+                type="radio"
+                name="sex"
+                id="sex"
+                value="Female"
+              />Female</label
+            >
+
+            <br />
+            <br />
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday" id="birthday" />
+
+            <br />
+            <br />
+
+            <label for="continent">Continent</label>
+            <select name="continent" id="continent">
+              <option value="asia">Asia</option>
+              <option value="africa">Africa</option>
+              <option value="europe">Europe</option>
+              <option value="antarctica">Antarctica</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Write something.."
+              style="height: 200px"
+            ></textarea>
+
+            <input type="submit" value="submit" />
+          </form>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
